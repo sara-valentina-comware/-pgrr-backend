@@ -23,7 +23,10 @@ const app = express();
 const cors = require("cors");
 
 const corsOptions = {
-    origin: ["http://localhost:5173"],
+    origin: [
+        "http://localhost:5173",
+        "https://sara-valentina-comware.github.io"
+    ],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true
@@ -851,5 +854,5 @@ app.put("/requerimientos/finalizar/:id", async (req, res) => {
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-  console.log("Servidor corriendo en puerto " + PORT);
+    console.log("Servidor corriendo en puerto " + PORT);
 });
